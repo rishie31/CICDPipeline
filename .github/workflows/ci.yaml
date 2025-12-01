@@ -4,13 +4,17 @@ jobs:
     build:
         runs-on: ubuntu-latest
         steps:
-            - name: Printing a message
-              run: echo "Hello, World!"
-            - name: List files
-              run: ls -la
-            - name: Print workflow event
-              run: echo "${{ github.event_name }}"
-            - name: Show Github workspace
-              run: echo "${{ github.workspace }}"
-            - name: Show Runner OS
-            
+          - name: Print a greeting
+            run: echo "Hello from GitHub Actions!"
+
+          - name: Show current time
+            run: date
+
+          - name: Show repository files
+            run: ls -la
+          - name: Print Workflow Event
+            run: echo "${{ github.event_name }}"
+          - name: Show Runner OS
+            run: echo "{{ runner.os }}"
+          - name: Show Github Repository
+            run: echo "${{ github.repository }}"
