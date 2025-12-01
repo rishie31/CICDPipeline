@@ -8,3 +8,9 @@ jobs:
               run: echo "Hello, World!"
             - name: List files
               run: ls -la
+            - name: Print workflow event
+              run: echo "${{ github.event_name }}"
+            - name: Show Github workspace
+              run: echo "${{ github.workspace }}"
+            - name: Show Runner OS
+            
